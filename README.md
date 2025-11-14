@@ -41,17 +41,17 @@ It then transforms the data into a JSONL format commonly used for fine-tuning LL
 Classification task
 This makes the dataset directly usable for training chatbots, support bots, or issue-resolution models.
 
-## Features
-### Pagination Support
+### Features
+#### Pagination Support
 Fetches all issues even when Jira splits them across pages.
-### Retry & Timeout Logic
+#### Retry & Timeout Logic
 Handles network failures gracefully:
 Retries 3 times
 Waits if rate limited (HTTP 429)
 Skips 5xx server errors safely
-### JSONL Transformation
+#### JSONL Transformation
 Converts raw issue fields into meaningful structured objects.
-### LLM Task Generation
+#### LLM Task Generation
 "task_summarization": "Summarize the issue: <title>",
 "task_classification": "Classify issue priority: <title>"
 
